@@ -1,1 +1,3 @@
-combined_files.txtcombined_files.txttur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+t1.txt: combined_files.txt
+t3.txt: combined_files.txt
+t4.txt: combined_files.txt
