@@ -1,9 +1,0 @@
-There is a text file. Print the longest line in file.
-
-If there's several lines of maximum length, print the last on1.
-
-If there's several lines of maximum length, print the last on2.
-
-If there's several lines of maximum length, print the last on3.
-
-Do not use built-in max function and file readlines() method.

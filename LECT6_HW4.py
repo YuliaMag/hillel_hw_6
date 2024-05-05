@@ -1,5 +1,4 @@
 import os
-import shutil
 
 # f = open("combined_files.txt", "x")
 # ========================================== #
@@ -7,7 +6,11 @@ import shutil
 with open("combined_files.txt", "w") as comb_f:
     for path, dirs, files in os.walk("./momma_dir/"):
         for f in files:
+            with open(os.path.join(path, f)) as file:
+                data = file.read()
             size = os.path.getsize(os.path.join(path, f))
-            cont = shutil.copy(os.path.join(path, f), "combined_files.txt") # TODO - find way to extract data from files to "combined_files.txt"
             if size <= 120:
-                comb_f.write(f"{f}: {cont}\n")
+                comb_f.write(f"{f}: {data} \n")
+
+
+
