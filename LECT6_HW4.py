@@ -9,7 +9,7 @@ with open("combined_files.txt", "w") as comb_f:
             with open(os.path.join(path, f)) as file:
                 data = file.read()
             size = os.path.getsize(os.path.join(path, f))
-            if size <= 120:
+            if size <= 120 and f.endswith(".txt"):
                 comb_f.write(f"{f}: {data} \n")
 
 
